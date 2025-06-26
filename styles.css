@@ -4,3 +4,17 @@
   background-color: lightgray;
   border: 1px solid #ccc;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 992px;
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* if you want vertical centering too */
+  flex-direction: column;
+}
