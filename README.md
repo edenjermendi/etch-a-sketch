@@ -17,3 +17,7 @@ Open `index.html` in your browser to use the sketchpad.
 ## Future Improvements
 
 - Gradual darkening effect on repeated hovers
+
+## Live Deployment
+
+Click [here](https://edenjermendi.github.io/etch-a-sketch/) to see this project live in action.
