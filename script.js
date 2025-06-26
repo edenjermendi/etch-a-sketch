@@ -1,5 +1,14 @@
-//create div squares inside container div
+//assign var to class
 const container = document.querySelector('.container');
-const square = document.createElement('div');
-square.classList.add('square');
-container.appendChild(square);
+
+//function to create square
+function makeSquare() {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    container.appendChild(square);
+};
+
+//loop to generate every cell / square
+for (let i = 0; i < 256; i++) {
+    makeSquare();
+};
