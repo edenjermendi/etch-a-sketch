@@ -20,8 +20,8 @@ let gridSize = 16;
 function generateGrid(size) {
     container.innerHTML = '';
     container.style.display = 'grid';
-    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${gridSize}, minmax(0, 1fr))`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, minmax(0, 1fr))`;
     
     for (let i = 0; i < gridSize * gridSize; i++) {
       makeSquare();
