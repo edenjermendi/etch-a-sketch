@@ -14,25 +14,33 @@ function makeSquare() {
 });
 };
 
-//prompt user for input
-let gridSize = parseInt(prompt("Enter a grid size (max 100):"));
-
-
-if (gridSize > 0 && gridSize <= 100) {
-    let totalSquares = gridSize * gridSize;
-    container.innerHTML = "";
-    for (let i = 0; i < totalSquares; i++) {
-        makeSquare();
-    }
-} else {
-    alert("Please enter a number between 1 and 100.");
-};
-
+//default size
 let gridSize = 16;
+
+function generateGrid(size) {
+    container.innerHTML = '';
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    
+    for (let i = 0; i < gridSize * gridSize; i++) {
+      makeSquare();
+    }
+  }
+
+//initial grid
+generateGrid(gridSize);
 
 const gridSelect = document.querySelector('#gridSizeSelect');
 gridSelect.addEventListener('change', (e) => {
-    
+    let newSize = parseInt(e.target.value);
+
+    if (!isNaN(newSize)) {
+    gridSize = newSize;
+    generateGrid(gridSize);
+    }
 });
+
+
 
 
