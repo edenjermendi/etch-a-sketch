@@ -28,5 +28,11 @@ if (gridSize > 0 && gridSize <= 100) {
     alert("Please enter a number between 1 and 100.");
 };
 
+let gridSize = 16;
+
+const gridSelect = document.querySelector('#gridSizeSelect');
+gridSelect.addEventListener('change', (e) => {
+    
+});
 
 
